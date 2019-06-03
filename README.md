@@ -1,18 +1,20 @@
 # Debugging Stack Trace #
 
-The error we are encountering due to missing code file, also we don't
-even have the folder, see error log below, on line 1.
+The error we are encountering due to missing code file and class, also we don't
+even have the folder, see error log below, on line 3.
 
 An error occurred while loading ./spec/oystercard_spec.rb.
-Failure/Error: require 'oystercard'
+Failure/Error:
+  describe Oystercard do
+  end
 
-LoadError:
-  cannot load such file -- oystercard
-# ./spec/oystercard_spec.rb:1:in  <top (required)>
+NameError:
+  uninitialized constant Oystercard
+# ./spec/oystercard_spec.rb:3:in <top (required)>
 No examples found.
 
 
-Finished in 0.00029 seconds (files took 0.15583 seconds to load)
+Finished in 0.00028 seconds (files took 0.12046 seconds to load)
 0 examples, 0 failures, 1 error occurred outside of examples
 
 We used previous experience to deduce that we must create a file.

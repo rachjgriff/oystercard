@@ -1,4 +1,4 @@
-require 'oystercard'
+#require 'oystercard'
 
-describe 'oystercard' do
+describe Oystercard do
 end
