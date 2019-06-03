@@ -18,3 +18,7 @@ Finished in 0.00028 seconds (files took 0.12046 seconds to load)
 0 examples, 0 failures, 1 error occurred outside of examples
 
 We used previous experience to deduce that we must create a file.
+
+Objects - Methods
+customer
+oystercard -> add_money
