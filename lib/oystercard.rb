@@ -18,13 +18,16 @@ class Oystercard
     @balance -= fare
   end
 
+  def in_journey?
+    @active
+  end
+
   def touch_in
+    @active = true
   end
 
   def touch_out
-  end
-
-  def in_journey?
+    @active = false
   end
 
 end

@@ -27,19 +27,26 @@ describe Oystercard do
 
     it 'deducts fare from oystercard balance' do
       subject.top_up(20)
-      expect{subject.deduct 5 }.to change{subject.balance }. by -5
+      expect{ subject.deduct 5 }.to change{subject.balance }. by -5
     end
   end
 
-  describe '#touch_in' do
-    it { is_expected.to respond_to(:touch_in) }
-  end
 
-  describe '#touch_out' do
-    it { is_expected.to respond_to(:touch_out) }
-  end
+  describe '#in_journey?' do
 
-  describe '#in_journey?'' do
-    it { is_expected.to respond_to(:in_journey?) }
+    it 'oystercard is not in_journey' do
+      expect(subject).to_not be_in_journey
+    end
+
+    it 'oystercard can touch_in' do
+      subject.touch_in
+      expect(subject).to be_in_journey
+    end
+
+    it 'oystercard can touch-out' do
+      subject.touch_in
+      subject.touch_out
+      expect(subject).to_not be_in_journey
+    end
   end
 end
