@@ -29,6 +29,17 @@ describe Oystercard do
       subject.top_up(20)
       expect{subject.deduct 5 }.to change{subject.balance }. by -5
     end
+  end
 
+  describe '#touch_in' do
+    it { is_expected.to respond_to(:touch_in) }
+  end
+
+  describe '#touch_out' do
+    it { is_expected.to respond_to(:touch_out) }
+  end
+
+  describe '#in_journey?'' do
+    it { is_expected.to respond_to(:in_journey?) }
   end
 end

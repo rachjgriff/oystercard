@@ -2,9 +2,10 @@ class Oystercard
 
   LIMIT = 90
 
-  attr_reader :balance
+  attr_reader :balance, :active
 
   def initialize
+    @active = false
     @balance = 0
   end
 
@@ -16,4 +17,14 @@ class Oystercard
   def deduct(fare)
     @balance -= fare
   end
+
+  def touch_in
+  end
+
+  def touch_out
+  end
+
+  def in_journey?
+  end
+
 end
